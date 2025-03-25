@@ -48,14 +48,19 @@ All MO documents.
 |            | Web             | PNEWINVW802G  | 10.232.79.147  |               |           | 10.15.35.200  |
 |            | Database        | PNEWINVD801G  | 10.235.123.220 |               |           | 10.197.73.217 |
 |            |
-| DEVELOP    | MO App          | DNEWINVA001G  | 10.138.34.239  | MO-IqkXKl373KR9  | R3dh@t!@# |
-|            | MO Web          | DNEWINVW001G  | 10.137.19.135  | MO-1a2b3c4d5e6f  | R3dh@t!@# |
-|            | MO MongoDB      | DNEWINVD001G  | 10.138.21.224  | MO_219M6pP8j  | R3dh@t!@# |
-|            | S3 App          | DMYOPIA001G   | 10.138.21.222  | S3-vAJ625z5waFv  |
-|            | S3 PostgresDB   | DMYOPIPGD001G | 10.138.21.223  | S3-1a2b3c4d5e6f  |
-|            | S3 MongoDB      | DMYOPIMGD001G | 10.138.21.224  | S3-4751z53j5  |
+| DEVELOP    | MO App          | DNEWINVA001G  | 10.138.34.239  | MO-8pk7770cbtKB  | R3dh@t!@# |
+|            | MO Web          | DNEWINVW001G  | 10.137.19.135  | MO-8pk7770cbtKB  | R3dh@t!@# |
+|            | MO MongoDB      | DNEWINVD001G  | 10.138.21.224  | MO-8pk7770cbtKB  | R3dh@t!@# |
+|            | S3 App          | DMYOPIA001G   | 10.138.21.222  | 1jZ_d8oX[O6wb8+  |
+|            | S3 PostgresDB   | DMYOPIPGD001G | 10.138.21.223  | 1jZ_d8oX[O6wb8+  |
+|            | S3 MongoDB      | DMYOPIMGD001G | 10.138.21.224  | 1jZ_d8oX[O6wb8+  |
 |            | JBoss App       | DWPPJBA001G   | 10.138.38.59   | Ais@30Jul     | R4j0VEi&5 |
 |            | JBoss PostgreDB | DWPPJBD001G   | 10.138.38.60   | Ais@30Jul     | R4j0VEi&5 |
+
+| User/Pass สำหรับดู Log  |
+| -------- | ---------- |
+| username | servergst  |
+| password | w0U+8817h  |
 
 
 ## Database

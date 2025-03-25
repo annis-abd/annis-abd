@@ -1,0 +1,66 @@
+title Perso SIM
+
+actor User
+participant MO #lightskyblue
+rparticipant PGZINV #lightpink
+rparticipant SFF #lightpink
+rparticipant PHX #lightpink
+database Mongo #lightgreen
+database SFFADM #lightgreen
+database SFFINVADM #lightgreen
+control AWS #orange
+
+note over MO #aliceblue: Initialize Screen
+
+alt #f5f5f5 Success path
+    MO->Mongo: get user info
+    Mongo-->MO: user location
+    MO->SFFADM: get dropdown list
+    SFFADM-->MO: dropdown list
+    MO->AWS: initial sim card reader
+    AWS-->MO: result
+    MO-->User: show screen
+else Any error occurs
+    MO--#red>User: show error
+end
+
+note over MO #aliceblue: Read SIM
+
+User->MO: click read sim
+alt #f5f5f5 Success path
+    MO->AWS: get real sim info
+    AWS-->MO: real sim info
+    MO->Mongo: check user permission
+    Mongo-->MO: is perso admin
+    
+    alt #e6f3ff is perso admin
+        MO->PGZINV: get sim location
+        PGZINV-->MO: sim location
+    end
+    
+    MO->SFF: get asset mobile info
+    SFF-->MO: asset info
+    alt #e6f3ff no asset info from SFF
+        MO->SFFINVADM: get asset info
+        SFFINVADM-->MO: asset info
+    end
+    
+    MO->PHX: check perso
+    PHX-->MO: sim detail
+    MO-->User: show sim detail
+else Any error occurs
+    MO--#red>User: show error
+end
+
+note over MO #aliceblue: Perso SIM
+
+User->MO: click perso sim
+alt #f5f5f5 Success path
+    MO->AWS: write sim
+    AWS-->MO: result
+    MO->PHX: confirm perso
+    PHX-->MO: result
+    MO-->User: show customerOrderId
+else Any error occurs
+    MO--#red>User: show error
+end
