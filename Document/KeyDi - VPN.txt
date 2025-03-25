@@ -1,0 +1,13 @@
+User Type : AIS User
+ปัญหาที่พบ : VPN(VPN Access Manager) - ปัญหา Login
+อาการปัญหาที่พบ : VPN_user authentication error
+ปัญหา :
+<ปัญหา Login VPN (Teleport2)>
+รายละเอียดปัญหา : vpn ขึ้น error user authentication error
+ดำเนินการ self unlock แล้วผ่าน แต่ไม่สามารถใช้งานvpn ได้ ขึ้นerror user authentication error เหมือนเดิม
+Username: xxxx
+Profile ที่ Connect:  employee dev
+Error ที่พบ :  user authentication error
+Vasco Account Lock (Y/N) :  N
+สิทธิ์ขอเข้าใช้งาน, ไม่ Expired (Y/N) : Y
+วัน - เวลา ที่พบปัญหา : xxxx

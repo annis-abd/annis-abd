@@ -1,0 +1,540 @@
+{
+  "PHXBE": {
+    "url": {
+      "var": "PHXBE_HOST_PORT",
+      "val": ""
+    },
+    "readTimeout": {
+      "var": "PHXBE_TIME_OUT",
+      "val": ""
+    }
+  },
+  "NPG": {
+    "url": {
+      "var": "NPG_HOST_PORT",
+      "val": "https://npg-api.az.intra.ais:8443"
+    },
+    "username": {
+      "var": "NPG_USERNAME",
+      "val": "NPG"
+    },
+    "timeout": {
+      "var": "NPG_TIMEOUT",
+      "val": ""
+    },
+    "pathPortedMasters": {
+      "var": "NPG_PATH_PORTED_MASTERS",
+      "val": "\"/v1/resources/resourceSpecification/npgPortedMasters.json\""
+    },
+    "pathBroadcasts": {
+      "var": "NPG_PATH_BROADCASTS",
+      "val": "\"/v1/resources/resourceUsage/npgBroadcasts.json\""
+    },
+    "pathAssignPrefixes": {
+      "var": "NPG_PATH_ASSIGN_PREFIXES",
+      "val": "\"/v1/resources/resourceSpecification/npgAssignPrefixes.json\""
+    }
+  },
+  "NPGPORTOUT": {
+    "url": {
+      "var": "NPGPORTOUT_HOST_PORT",
+      "val": "https://npg-api.az.intra.ais:8443"
+    },
+    "path": {
+      "var": "NPGPORTOUT_PATH",
+      "val": "/ConBSSWSSource/BusinessInterfaceNPGatewayService"
+    }
+  },
+  "PGZ": {
+    "url": {
+      "var": "PGZ_HOST_PORT",
+      "val": "http://10.197.42.112:19080"
+    },
+    "readTimeout": {
+      "var": "PGZ_TIME_OUT",
+      "val": ""
+    },
+    "path": {
+      "var": "PGZ_PATH",
+      "val": "/api/v2/PGZInventory/synchronous/ServiceProvisioning"
+    }
+  },
+  "PGZMVPN": {
+    "url": {
+      "var": "PGZMVPN_HOST_PORT",
+      "val": "http://10.197.42.112:19080"
+    },
+    "path": {
+      "var": "PGZMVPN_PATH",
+      "val": "/api/v1/Fulfillment/synchronous/ServiceProvisioning"
+    }
+  },
+  "PGZMVPN_ACTION": {
+    "url": {
+      "var": "PGZMVPN_ACTION_HOST_PORT",
+      "val": "http://10.197.42.112:18080"
+    },
+    "path": {
+      "var": "PGZMVPN_ACTION_PATH",
+      "val": "/api/v1/fulfillment/pgzinquiry/synchronous/serviceprovisioning"
+    }
+  },
+  "ZTR": {
+    "url": {
+      "var": "ZTR_HOST_PORT",
+      "val": "http://10.197.42.112:19080"
+    },
+    "readTimeout": {
+      "var": "ZTR_TIME_OUT",
+      "val": ""
+    },
+    "path": {
+      "var": "ZTR_PATH",
+      "val": "/api/v1/ZTRInventory/synchronous/ServiceProvisioning"
+    },
+    "pathASP": {
+      "var": "ZTR_PATH_ASP",
+      "val": "/api/v1/PGZInventory/ServiceProvisioning"
+    },
+    "pathSSP": {
+      "var": "ZTR_PATH_SSP",
+      "val": "/api/v1/PGZInventory/synchronous/ServiceProvisioning"
+    }
+  },
+  "SDF": {
+    "url": {
+      "var": "SDF_HOST_PORT",
+      "val": "http://10.197.42.112:19080"
+    },
+    "readTimeout": {
+      "var": "SDF_TIME_OUT",
+      "val": ""
+    },
+    "path": {
+      "var": "SDF_PATH",
+      "val": ""
+    },
+    "pathVIS": {
+      "var": "SDF_PATH_VIS",
+      "val": "/api/v1/resources/resourceSpecification/inquirySimDetail.json"
+    },
+    "pathCUL": {
+      "var": "SDF_PATH_CUL",
+      "val": "/api/v1/commons/usages/listOfValues.json"
+    },
+    "pathSequence": {
+      "var": "SDF_PATH_SEQUENCE",
+      "val": "/api/v1/commons/usages/sequences.json?filter=($0(name=$1)(increment=$2))"
+    },
+    "pathCommonSequence": {
+      "var": "SDF_PATH_COMMON_SEQUENCE",
+      "val": "/api/v1/commons/usages/sequences.json"
+    },
+    "pathCheckSimTypeTraveler": {
+      "var": "SDF_PATH_CHECK_SIME_TYPE_TRAVELER",
+      "val": "/api/v1/resources/resourceSpecification/sim.json"
+    },
+    "pathPackageTypeMasterPrep": {
+      "var": "SDF_PATH_PACKAGE_TYPE_MASTER_PREP",
+      "val": "/api/v1/productOffering/productOfferingSpec/packageTypeMasterPrep.json"
+    },
+    "pathPreparation": {
+      "var": "SDF_PATH_PREPARATION",
+      "val": "/api/v1/resources/resourceSpecification/preparation.json"
+    },
+    "pathStickers": {
+      "var": "SDF_PATH_STICKERS",
+      "val": "/api/v1/resources/resourceSpecification/stickers.json"
+    },
+    "pathResource": {
+      "var": "SDF_PATH_RESOURCE",
+      "val": "/api/v1/resources/resourceSpecification"
+    },
+    "pathDeletePublic": {
+      "var": "SDF_PATH_DELETE_PUBLIC",
+      "val": "/api/v1/customers/customerCharacteristic/publicIdAndAccountRelations.json?filter=(&(publicId=$msisdn))"
+    },
+    "pathDeleteSubscriber": {
+      "var": "SDF_PATH_DELETE_SUBSCRIBER",
+      "val": "/api/v1/method/deleteSubscriber.json"
+    },
+    "pathListOfValues": {
+      "var": "SDF_PATH_LIST_OF_VALUES",
+      "val": "/api/v1/commons/usages/listOfValues.json"
+    },
+    "pathNumberPland": {
+      "var": "SDF_PATH_NUMBER_PLAND",
+      "val": "/api/v1/resources/resourceSpecification/numberPlan.json"
+    },
+    "pathPrefixNumber": {
+      "var": "SDF_PATH_PREFIX_NUMBER",
+      "val": "/api/v1/resources/resourceSpecification/prefixNumber.json"
+    },
+    "pathPortOut": {
+      "var": "SDF_PATH_PORT_OUT",
+      "val": "/api/v1/phx/serviceRequest/order/phxGetMnpOrder/msisdn/$msisdn.json"
+    },
+    "pathLang": {
+      "var": "SDF_LANG_PATH",
+      "val": ""
+    }
+  },
+  "PHXPP": {
+    "url": {
+      "var": "PHXPP_HOST_PORT",
+      "val": "http://10.197.42.112:18080"
+    },
+    "readTimeout": {
+      "var": "PHXPP_TIME_OUT",
+      "val": ""
+    },
+    "path": {
+      "var": "PHXPP_PATH",
+      "val": "/api/v1/masterConfig/limitMobile.json"
+    },
+    "pathProvisioning": {
+      "var": "PHXPP_PATH_CONFIRM_PERSO",
+      "val": "/api/v1/fulFillment/productProvisioning"
+    },
+    "pathSim": {
+      "var": "PHXPP_PATH_SIM",
+      "val": "/api/v1/product/simNumberMapping"
+    },
+    "pathPro": {
+      "var": "PHXPP_PATH_PRO",
+      "val": "/api/v1/fulFillment/productProvisioning"
+    },
+    "pathMoni": {
+      "var": "PHXPP_PATH_MONI",
+      "val": ""
+    },
+    "pathCheckPerso": {
+      "var": "PHXPP_PATH_CHECK_PERSO",
+      "val": "/api/v1/product/checkPerso"
+    },
+    "pathConfirmPerso": {
+      "var": "PHXPP_PATH_CONFIRM_PERSO",
+      "val": "/api/v1/fulFillment/productProvisioning"
+    },
+    "path100Mins": {
+      "var": "PHX_PATH_BATCH",
+      "val": "/api/v1/createOrder/changeProduct/msisdn/$msisdn/offering/$offeringCode.json"
+    },
+    "pathCreateCA": {
+      "var": "PHX_PATH_NEW_CA",
+      "val": "/api/v1/phx/serviceRequest/order/NewCustomer/msisdn/$msisdn.json"
+    },
+    "pathPortOut": {
+      "var": "PHX_PATH_PORT_OUT",
+      "val": "/api/v1/phx/serviceRequest/order/phxGetMnpOrder/msisdn/$msisdn.json"
+    },
+    "pathFreePack": {
+      "var": "PHXPP_PATH_FREE_PACK",
+      "val": ""
+    },
+    "pathPortOutOrderId": {
+      "var": "PHX_PATH_PORT_OUT_ORDER_ID",
+      "val": "/api/v1/phx/serviceRequest/order/phxGetMnpOrder/orderPortInId/$orderPortInId.json"
+    }
+  },
+  "SFF": {
+    "url": {
+      "var": "SFF_HOST_PORT",
+      "val": "http://10.251.60.24:85"
+    },
+    "path": {
+      "var": "SFF_PATH",
+      "val": "/SFFWebService/SFFService"
+    }
+  },
+  "ADMD": {
+    "url": {
+      "var": "ADMD_HOST_PORT",
+      "val": "https://api-sgl.intra.ais:15001"
+    },
+    "timeout": {
+      "var": "ADMD_TIMEOUT",
+      "val": "15000"
+    },
+    "msTeam": {
+      "var": "ADMD_NOTIFICATION_MSTEAM",
+      "val": "https://mimotech.webhook.office.com/webhookb2/52486dc2-4ef3-460a-8c31-2f97e921841f@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/944ef52c81da400692f7d7e4662efcc1/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    },
+    "msTeamPrettyNo": {
+      "var": "ADMD_NOTIFICATION_MSTEAM_PRETTY",
+      "val": "https://mimotech.webhook.office.com/webhookb2/52486dc2-4ef3-460a-8c31-2f97e921841f@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/8d181e4ffe68467abfa98ee23c9f00f9/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    },
+    "msTeamMobileReuse": {
+      "var": "ADMD_MSTEAM_MOBILEREUSE",
+      "val": "https://outlook.office.com/webhook/2ea690e1-3708-44db-bc7a-1fab571a7a6d@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/537e15980f894911b3ded2e23a6773ad/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    },
+    "msTeamActivityBatchPostpaid": {
+      "var": "ADMD_MSTEAM_BATCH_MONITOR",
+      "val": "https://mimotech.webhook.office.com/webhookb2/5c659bbb-c88e-469b-866b-156799281ad7@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/633fda99494549a1a59ec3e2856e3ef4/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    },
+    "msTeamActivityJobCopyFileSAP": {
+      "var": "ADMD_MSTEAM_JOB_COPY_FILE_SAP_MONITOR",
+      "val": ""
+    },
+    "msTeamNumberAdminExportAll": {
+      "var": "ADMD_MSTEAM_NUMBER_ADMIN_EXPORT_ALL",
+      "val": "https://mimotech.webhook.office.com/webhookb2/5c659bbb-c88e-469b-866b-156799281ad7@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/eea035fc8bfa476caceb1ccfb2ea7d13/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    },
+    "msTeamActivityBatchMonitorDisconnect": {
+      "var": "ADMD_MSTEAM_BATCH_MONITOR_DISCONNECT",
+      "val": "https://mimotech.webhook.office.com/webhookb2/5c659bbb-c88e-469b-866b-156799281ad7@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/b21f2bd123cf42919d4ec1004101b5ae/c045ce57-f9cc-4467-8690-c22497ee7913"
+    },
+    "msTeamBatcgSyncMaterial": {
+      "var": "ADMD_MSTEAM_BATCH_SYNC_MATERIAL",
+      "val": "https://mimotech.webhook.office.com/webhookb2/5c659bbb-c88e-469b-866b-156799281ad7@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/fb59872f64484164905bc7c526ac2de5/39372f06-f55c-4cae-991d-cbbb38fdc40f"
+    },
+    "msTeamMonitoring": {
+      "var": "ADMD_MSTEAM_MONITORING",
+      "val": "https://mimotech.webhook.office.com/webhookb2/050232bb-279d-469c-941e-d01145366742@833df664-61c8-4af0-bcce-b9eed5f10e5a/IncomingWebhook/dd8417307ee54557a6ac616ebad07dc3/9dcee13e-6755-4faa-8d7a-3e987229d7ec"
+    }
+  },
+  "GSSO": {
+    "url": {
+      "var": "GSSO_HOST_PORT",
+      "val": "https://10.197.40.69"
+    },
+    "sendOTPCommand": {
+      "var": "GSSO_SEND_OTP",
+      "val": "/api/v1/gsso/sendOneTimePW.json"
+    },
+    "confirmOTPCommand": {
+      "var": "GSSO_CONFIRM_OTP",
+      "val": "/api/v1/gsso/confirmOneTimePassword.json"
+    }
+  },
+  "JBOSS": {
+    "limitParallel": {
+      "var": "JBOSS_LIMIT_PARALLEL",
+      "val": ""
+    },
+    "url": {
+      "var": "JBOSS_HOST_PORT",
+      "val": "https://10.197.42.70:8443"
+    },
+    "pathGetInquiryActivateEpin": {
+      "var": "JBOSS_PATH_GET_INQUIRY_ACTIVATE_EPIN",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryActivateEpin"
+    },
+    "pathPostConfirmActivateEpin": {
+      "var": "JBOSS_PATH_POST_CONFIRM_ACTIVATE_EPIN",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmActivateEpin"
+    },
+    "pathPostReActivateEpin": {
+      "var": "JBOSS_PATH_POST_RE_CONFIRM_ACTIVATE_EPIN",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/reActivateEpin"
+    },
+    "pathPostLoadSerial": {
+      "var": "JBOSS_PATH_POST_LOAD_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/loadSerial"
+    },
+    "pathPostInquiryAct": {
+      "var": "JBOSS_PATH_POST_INQUIRY_ACT",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryAct"
+    },
+    "pathPostInquiryDeactBatch": {
+      "var": "JBOSS_PATH_POST_INQUIRY_DEACT_BATCH",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryDeactBatch"
+    },
+    "pathPostConfirmAct": {
+      "var": "JBOSS_PATH_POST_COMFIRM_ACT",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmAct"
+    },
+    "pathPostReConfirmAct": {
+      "var": "JBOSS_PATH_POST_RE_COMFIRM_ACT",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/reConfirmAct"
+    },
+    "pathPostConfirmDeactBatch": {
+      "var": "JBOSS_PATH_POST_CONFIRM_DEACT_BATCH",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmDeactBatch"
+    },
+    "pathPostReConfirmDeactBatch": {
+      "var": "JBOSS_PATH_POST_RE_COMFIRM_DEACT_BATCH",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/reConfirmDeactBatch"
+    },
+    "pathPostInquiryDeactSerial": {
+      "var": "JBOSS_PATH_POST_INQUIRY_DEACT_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryDeactSerial"
+    },
+    "pathPostConfirmDeactSerial": {
+      "var": "JBOSS_PATH_POST_CONFIRM_DEACT_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmDeactSerial"
+    },
+    "pathPostReConfirmDeactSerial": {
+      "var": "JBOSS_PATH_POST_RE_CONFIRM_DEACT_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/reConfirmDeactSerial"
+    },
+    "pathGETInquiryProgresss": {
+      "var": "JBOSS_PATH_GET_INQUIRY_PROGRESS",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryProgress"
+    },
+    "pathPUTReceiveSapCashCard": {
+      "var": "JBOSS_PATH_PUT_RECEIVE_SAP_CASH_CARD",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/receiveSapCashCard"
+    },
+    "pathPOSTConfirmLoad": {
+      "var": "JBOSS_PATH_POST_CONFIRM_LOAD",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmLoad"
+    },
+    "pathPOSTConfirmUnload": {
+      "var": "JBOSS_PATH_POST_CONFIRM_UNLOAD",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/confirmUnload"
+    },
+    "pathPOSTinquiryLoadSerial": {
+      "var": "JBOSS_PATH_POST_INQUIRY_LOAD_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryLoadSerial"
+    },
+    "pathGETInquiryCashStock": {
+      "var": "JBOSS_PATH_GET_INQUIRY_CASH_STOCK",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryCashStock"
+    },
+    "pathPOSTInquiryCashSerialNo": {
+      "var": "JBOSS_PATH_POST_INQUIRY_CASH_SERIAL_NO",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryCashSerialNo"
+    },
+    "pathGETInquiryCashBatch": {
+      "var": "JBOSS_PATH_GET_INQUIRY_CASH_BATCH",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryCashBatch"
+    },
+    "pathGETInquiryCashSerial": {
+      "var": "JBOSS_PATH_GET_INQUIRY_CASH_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/inquiryCashSerial"
+    },
+    "pathPostForceActivateEpin": {
+      "var": "JBOSS_PATH_POST_FORCE_CONFIRM_ACTIVATE_EPIN",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/forceActivateEpin"
+    },
+    "pathPostForceConfirmDeactBatch": {
+      "var": "JBOSS_PATH_POST_FORCE_COMFIRM_DEACT_BATCH",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/forceConfirmDeactBatch"
+    },
+    "pathPostForceConfirmDeactSerial": {
+      "var": "JBOSS_PATH_POST_FORCE_CONFIRM_DEACT_SERIAL",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/forceConfirmDeactSerial"
+    },
+    "pathPostForceConfirmAct": {
+      "var": "JBOSS_PATH_POST_FORCE_COMFIRM_ACT",
+      "val": "/WPPApp/api/v1/phx-inventory/jboss/forceConfirmAct"
+    }
+  },
+  "S3Portal": {
+    "url": {
+      "var": "S3PORTAL_ENDPOINT",
+      "val": "https://10.197.88.81:8443"
+    },
+    "pathGetImageS3": {
+      "var": "S3PORTAL_PATH_GET_IMAGE",
+      "val": "/api/v1/mo-document-tracking/infra/get-document-s3-archiving-mo"
+    },
+    "pathPostUploadBucket": {
+      "var": "S3PORTAL_PATH_POST_UPLOAD_BUCKET",
+      "val": ""
+    }
+  },
+  "ATN": {
+    "url": {
+      "var": "ATN_HOST_PORT",
+      "val": "https://athena.intra.ais:44300"
+    }
+  },
+  "PHXInvSAP": {
+    "url": {
+      "var": "PHX_INV_SAP_HOST_PORT",
+      "val": "https://piprd.itas.co.th"
+    },
+    "username": {
+      "var": "PHX_INV_SAP_USERNAME",
+      "val": "PIAPPLUSER_PPS"
+    },
+    "password": {
+      "var": "PHX_INV_SAP_PASSWORD",
+      "val": "prdPI@15"
+    },
+    "pathRESTAdapter": {
+      "var": "PHX_INV_SAP_PATH_REST_ADAPTER",
+      "val": "/RESTAdapter"
+    },
+    "funcZSDCS002": {
+      "var": "PHX_INV_SAP_PATH_FUCN_ZSDCS002",
+      "val": "/ZSDCS002"
+    }
+  },
+  "PGZ_INQUIRY": {
+    "url": {
+      "var": "PGZ_INQUIRY_HOST_PORT",
+      "val": "http://10.197.46.40:82"
+    },
+    "path": {
+      "var": "PGZ_INQUIRY_PATH",
+      "val": "/resources/v1/fulfillment/pgzinquiry/synchronous/serviceprovisioning"
+    }
+  },
+  "SDF_PORTOUTOVERWRITE": {
+    "url": {
+      "var": "SDF_PORTOUTOVERWRITE_HOST_PORT",
+      "val": "http://10.198.40.37:19080"
+    },
+    "pathPortOutPPreValidations": {
+      "var": "SDF_PORTOUT_PPREVALIDATIONS__PATH",
+      "val": "/api/v1/services/serviceOrder/MNPPreValidations.json"
+    },
+    "pathPortOutRequests": {
+      "var": "SDF_PORTOUT_REQUESTS_PATH",
+      "val": "/api/v1/services/serviceOrder/MNPPortOutRequests.json"
+    }
+  },
+  "CQS_PREPAID": {
+    "url": {
+      "var": "CQS_PREPAID_HOST_PORT",
+      "val": "https://cqsserv.ais.co.th:443"
+    },
+    "path": {
+      "var": "CQS_PREPAID_PATH",
+      "val": "/NebulaWS/cdr/queryCdrVoice"
+    }
+  },
+  "CQS_POSTPAID": {
+    "url": {
+      "var": "CQS_POSTPAID_HOST_PORT",
+      "val": "https://cqsserv.ais.co.th:443"
+    },
+    "path": {
+      "var": "CQS_POSTPAID_PATH",
+      "val": "/EBillCQSWS/ws/ebillCQSUsage"
+    }
+  },
+  "MYIM": {
+    "url": {
+      "var": "MYIM_LIST_MY_CASES_HOST_PORT",
+      "val": "https://myimws-tls1.intra.ais"
+    },
+    "pathListMyCases": {
+      "var": "MYIM_LIST_MY_CASES_PATH",
+      "val": "/prweb/PRRestService/IMGetWorkCaseService/Services/ListMyCases"
+    }
+  },
+  "PGZ_INV": {
+    "url": {
+      "var": "PGZ_INV_HOST_PORT",
+      "val": "http://10.197.42.112:19080"
+    },
+    "path": {
+      "var": "PGZ_INV_PATH",
+      "val": "/api/v2/PGZInventory/synchronous/ServiceProvisioning"
+    }
+  },
+  "CCSM": {
+    "url": {
+      "var": "CCSM_HOST_PORT",
+      "val": "https://prodoncloudapim.azure-api.net"
+    },
+    "pathChannelASCProfile": {
+      "var": "CCSM_PATH_CHANNEL_ASC_PROFILE",
+      "val": "/ccsm-on-cloud/phxPartner/v1/partner/ChannelASCProfile.json"
+    }
+  }
+}
