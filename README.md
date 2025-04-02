@@ -107,19 +107,19 @@ All MO documents.
 | Prod             | <https://myoffice-portal.intra.ais:8443>                                                         |
 |                  |
 | Portal           | /phx-inventory/auth/signin-sff/phx-inventory/portal/portal-management?sffToken=                  |
-| Admin all around | /phx-inventory/auth/signin-sff/phx-inventory/admin/admin-all-around?sffToken=                    |
+| Admin all Around | /phx-inventory/auth/signin-sff/phx-inventory/admin/admin-all-around?sffToken=                    |
 | Perso SIM        | /phx-inventory/auth/signin-sff/phx-inventory/cecilia/perso-sim?sffToken=                         |
 | Inquiry SIM      | /phx-inventory/auth/signin-sff/phx-inventory/universe/inventory/sim/inquiry-sim/by-sim?sffToken= |
+| Print Sticker    | /phx-inventory/auth/signin-sff/phx-inventory/inventory/print/print-sticker?sffToken=             |
 
 
 ## Deployment
 
 1. Notify team
 2. Create [WR](https://tts.intra.ais/)
-3. Create [WI](https://docs.google.com/document/d/1bvbac1E6j4cD-DcjABzGq7MRPBmYc4fd/edit?usp=sharing&ouid=100533008439983390463&rtpof=true&sd=true)
-4. Upload file to NEXUS
+3. Create [WI](https://github.com/annis-abd/annis-abd/tree/master/Document/Deploy)
 5. Upload to ACTM
-6. Upload to [REPO](https://repo1.matador.ais.co.th/#browse/welcome)
+6. Upload to [NEXUS](https://repo1.matador.ais.co.th/#browse/welcome)
 7. Notify ACTM
 
 | WR                             |                                                               |
@@ -159,25 +159,25 @@ All MO documents.
 
 | REPO        |                          |
 | ----------- | ------------------------ |
-| File        | conf-app-1.0.0-20230000  |
+| File        | conf-app-1.0.0-20250000  |
 | Group ID    | conf-phx                 |
 | Artifact ID | conf-app                 |
-| Version     | 1.0.0-20230000           |
+| Version     | 1.0.0-20250000           |
 |             |
-| File        | conf-web-1.0.0-20230000  |
+| File        | conf-web-1.0.0-20250000  |
 | Group ID    | conf-phx                 |
 | Artifact ID | conf-web                 |
-| Version     | 1.0.0-20230000           |
+| Version     | 1.0.0-20250000           |
 |             |
-| File        | phxinvapp-1.0.0-20230000 |
+| File        | phxinvapp-1.0.0-20250000 |
 | Group ID    | app                      |
 | Artifact ID | phxinvapp                |
-| Version     | 1.0.0-20230000           |
+| Version     | 1.0.0-20250000           |
 |             |
-| File        | phxinvweb-1.0.0-20230000 |
+| File        | phxinvweb-1.0.0-20250000 |
 | Group ID    | web                      |
 | Artifact ID | phxinvweb                |
-| Version     | 1.0.0-20230000           |
+| Version     | 1.0.0-20250000           |
 
 
 ## Contact
