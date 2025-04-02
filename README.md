@@ -117,12 +117,10 @@ All MO documents.
 1. Notify team
 2. Create [WR](https://tts.intra.ais/)
 3. Create [WI](https://docs.google.com/document/d/1bvbac1E6j4cD-DcjABzGq7MRPBmYc4fd/edit?usp=sharing&ouid=100533008439983390463&rtpof=true&sd=true)
-4. Create [Source](https://docs.google.com/document/d/1tuQC3tzQJJ5D8lf3RwdUV2VVs6G5TJQ0/edit?usp=sharing&ouid=100533008439983390463&rtpof=true&sd=true)
-5. Create [ROP](https://app-apac.onetrust.com/auth/login)
-6. Pack code
-7. Upload to ACTM
-8. Upload to [REPO](https://repo1.matador.ais.co.th/#browse/welcome)
-9. Notify ACTM
+4. Upload file to NEXUS
+5. Upload to ACTM
+6. Upload to [REPO](https://repo1.matador.ais.co.th/#browse/welcome)
+7. Notify ACTM
 
 | WR                             |                                                               |
 | ------------------------------ | ------------------------------------------------------------- |
@@ -158,11 +156,6 @@ All MO documents.
 | yyyymmdd     |
 | dd-1/mm/yyyy |
 | *rollback    |
-
-| Source      |
-| ----------- |
-| WR00-000000 |
-| dd/mm/yyyy  |
 
 | REPO        |                          |
 | ----------- | ------------------------ |
