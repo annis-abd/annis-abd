@@ -57,10 +57,10 @@ All MO documents.
 |            | JBoss App       | DWPPJBA001G   | 10.138.38.59   | Ais@30Jul     | R4j0VEi&5 |
 |            | JBoss PostgreDB | DWPPJBD001G   | 10.138.38.60   | Ais@30Jul     | R4j0VEi&5 |
 
-| User/Pass สำหรับดู Log  |
-| -------- | ---------- |
-| username | servergst  |
-| password | w0U+8817h  |
+| Log App  |           |
+| -------- | --------- |
+| username | servergst |
+| password | w0U+8817h |
 
 
 ## Database
