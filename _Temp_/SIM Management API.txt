@@ -1,0 +1,493 @@
+openapi: 3.0.0
+info:
+  title: SIM Management API
+  description: API documentation for SIM Management Screen
+  version: 1.0.0
+tags:
+  - name: MO-API
+    description: My Office API for SIM Management
+  - name: Backend-API
+    description: Backend API for SIM Management
+paths:
+  # MO API
+  /api/v1/phx-inventory/sim/inquiry-sim/get-sim:
+    get:
+      tags:
+        - MO-API
+      summary: Get SIM information
+      description: Read SIM information by range or other criteria
+      parameters:
+        - name: formType
+          in: query
+          required: true
+          schema:
+            type: string
+            example: range
+        - name: username
+          in: query
+          required: true
+          schema:
+            type: string
+            example: ADMIN
+        - name: system
+          in: query
+          required: true
+          schema:
+            type: string
+            example: eSim
+        - name: simFrom
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "0600889302188"
+        - name: simTo
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "0600889302189"
+        - name: userId
+          in: query
+          required: true
+          schema:
+            type: string
+            example: ADMIN
+        - name: page
+          in: query
+          required: true
+          schema:
+            type: integer
+            example: 0
+        - name: limit
+          in: query
+          required: true
+          schema:
+            type: integer
+            example: 10
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MOGetSimResponse'
+
+  /api/v1/phx-inventory/sim/inquiry-sim/change-sim-all:
+    post:
+      tags:
+        - MO-API
+      summary: Change SIM status or profile
+      description: Update SIM status, profile, or other attributes in batch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                formType:
+                  type: string
+                  example: "range"
+                username:
+                  type: string
+                  example: "ADMIN"
+                system:
+                  type: string
+                  example: "eSim"
+                simFrom:
+                  type: string
+                  example: "0600889302188"
+                simTo:
+                  type: string
+                  example: "0600889302188"
+                userId:
+                  type: string
+                  example: "ADMIN"
+                actionType:
+                  type: string
+                  example: "Change Profile"
+                updates:
+                  type: object
+                total:
+                  type: string
+                  example: "1"
+            examples:
+              changeStatus:
+                summary: Change Status Request
+                value:
+                  formType: "range"
+                  username: "ADMIN"
+                  system: "eSim"
+                  simFrom: "0600889302188"
+                  simTo: "0600889302188"
+                  userId: "ADMIN"
+                  actionType: "Change Profile"
+                  updates:
+                    status: "PendingMigrate"
+                  total: "1"
+              changeProfile:
+                summary: Change Profile Request
+                value:
+                  formType: "range"
+                  username: "ADMIN"
+                  system: "eSim"
+                  simFrom: "0600889302188"
+                  simTo: "0600889302188"
+                  userId: "ADMIN"
+                  actionType: "Change Profile"
+                  updates:
+                    source: "S1"
+                    usageType: "1SIM2NUM"
+                  total: "1"
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "uid-12345"
+
+  /api/v1/phx-inventory/sim/inquiry-sim/transfer-sim-all:
+    post:
+      tags:
+        - MO-API
+      summary: Transfer SIM location
+      description: Update SIM location information in batch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                formType:
+                  type: string
+                  example: "range"
+                username:
+                  type: string
+                  example: "ADMIN"
+                system:
+                  type: string
+                  example: "eSim"
+                simFrom:
+                  type: string
+                  example: "0600889302188"
+                simTo:
+                  type: string
+                  example: "0600889302188"
+                userId:
+                  type: string
+                  example: "ADMIN"
+                actionType:
+                  type: string
+                  example: "Transfer SIM"
+                updates:
+                  type: object
+                  properties:
+                    location:
+                      type: string
+                      example: "1000"
+                    remark:
+                      type: string
+                      example: "test"
+                total:
+                  type: string
+                  example: "1"
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "uid-12345"
+
+  # Backend API
+  /v1/resources/resourceSpecification/inquirySimDetail.json:
+    get:
+      tags:
+        - Backend-API
+      summary: SDF Inquiry SIM
+      description: Read SIM information from SDF
+      parameters:
+        - name: filter
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "(&(serialNo>=0600889302188)(serialNo<=0600889302189))"
+        - name: offset
+          in: query
+          required: true
+          schema:
+            type: integer
+            example: 0
+        - name: limit
+          in: query
+          required: true
+          schema:
+            type: integer
+            example: 10
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InquirySimDetailResponse'
+
+  /api/v1/PGZInventory/synchronous/ServiceProvisioning:
+    post:
+      tags:
+        - Backend-API
+      summary: PGZ SIM Service
+      description: Provision SIM services in PGZ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                requestHeader:
+                  type: object
+                  properties:
+                    resourceGroupId:
+                      type: string
+                      example: "numberInventory_202503261655804150600889302188"
+                    userSys:
+                      type: string
+                      example: "PHXNewInv"
+                    reTransmit:
+                      type: string
+                      example: "0"
+                resourceItemList:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      resourceName:
+                        type: string
+                        example: "numberInventory"
+                      requestType:
+                        type: string
+                        example: "UPDATE"
+                      operationType:
+                        type: string
+                        example: "simSerialNoAndPHXeSIM"
+                      userId:
+                        type: string
+                        example: "ADMIN"
+                      simSerialNoList:
+                        type: array
+                        items:
+                          type: object
+            examples:
+              changeStatus:
+                summary: Change Status Request
+                value:
+                  requestHeader:
+                    resourceGroupId: "numberInventory_202503261655804150600889302188"
+                    userSys: "PHXNewInv"
+                    reTransmit: "0"
+                  resourceItemList:
+                    - resourceName: "numberInventory"
+                      requestType: "UPDATE"
+                      operationType: "simSerialNoAndPHXeSIM"
+                      userId: "ADMIN"
+                      simSerialNoList:
+                        - serialNo: "0600889302188"
+                          simState: "Prematch"
+              changeProfile:
+                summary: Change Profile Request
+                value:
+                  requestHeader:
+                    resourceGroupId: "numberInventory_202503261655804150600889302188"
+                    userSys: "PHXNewInv"
+                    reTransmit: "0"
+                  resourceItemList:
+                    - resourceName: "numberInventory"
+                      requestType: "UPDATE"
+                      operationType: "simSerialNoAndPHXeSIM"
+                      userId: "ADMIN"
+                      simSerialNoList:
+                        - serialNo: "0600889302188"
+                          sourceCode: "S1"
+                          usageType: "1SIM2NUM"
+              transferSim:
+                summary: Transfer SIM Request
+                value:
+                  requestHeader:
+                    resourceGroupId: "numberInventory_202503261655804150600889302188"
+                    userSys: "PHXNewInv"
+                    reTransmit: "0"
+                  resourceItemList:
+                    - resourceName: "numberInventory"
+                      requestType: "UPDATE"
+                      operationType: "simSerialNoAndPHXeSIM"
+                      userId: "ADMIN"
+                      simSerialNoList:
+                        - transferLocationFlag: "Y"
+                          serialNo: "0600889302188"
+                          locationId: "1000"
+                          remark: "test"
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceProvisioningResponse'
+
+
+components:
+  schemas:
+    MOGetSimResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              serialNo:
+                type: string
+                example: "0600889302188"
+              activeMobileNo:
+                type: string
+                example: ""
+              regionCode:
+                type: string
+                example: "C301"
+              displayValue:
+                type: string
+                example: "CENTRAL 3G-C301-Post-paid"
+              usageType:
+                type: string
+                example: "1SIM2NUM"
+              simState:
+                type: string
+                example: "PendingMigrate"
+              stateDate:
+                type: string
+                example: "15/03/2025"
+              locationId:
+                type: string
+                example: "1000"
+              locationName:
+                type: string
+                example: "Front Operation Support"
+              simType:
+                type: string
+                example: "Service"
+              simVersion:
+                type: string
+                example: "3G"
+              sourceCode:
+                type: string
+                example: "S1"
+              # Other fields omitted for brevity
+        total:
+          type: string
+          example: "1"
+
+    InquirySimDetailResponse:
+      type: object
+      properties:
+        resultCode:
+          type: string
+          example: "20000"
+        resultDescription:
+          type: string
+          example: "Success"
+        resultData:
+          type: array
+          items:
+            type: object
+            properties:
+              activeMobileNo:
+                type: string
+                example: ""
+              allocateBy:
+                type: string
+                example: ""
+              simState:
+                type: string
+                example: "PendingMigrate"
+              serialNo:
+                type: string
+                example: "0600889302188"
+              # Other fields omitted for brevity
+        rowCount:
+          type: string
+          example: "2"
+
+    ServiceProvisioningResponse:
+      type: object
+      properties:
+        responseHeader:
+          type: object
+          properties:
+            reTransmit:
+              type: string
+              example: "0"
+            userSys:
+              type: string
+              example: "PHXNewInv"
+            resourceGroupId:
+              type: string
+              example: "numberInventory_202503261655804150600889302188"
+            resourceOrderId:
+              type: string
+              example: "DBSIPGSA001G-PGZINV-202503261653460391"
+            resultCode:
+              type: string
+              example: "20000"
+            resultDesc:
+              type: string
+              example: "Success"
+            developerMessage:
+              type: string
+              example: ""
+        resourceItemList:
+          type: array
+          items:
+            type: object
+            properties:
+              resourceName:
+                type: string
+                example: "numberInventory"
+              resourceItemStatus:
+                type: string
+                example: "Success"
+              resourceItemErrMessage:
+                type: string
+                example: "Success"
+              errorFlag:
+                type: string
+                example: "11111"
+              specialErrHandling:
+                type: object
+                properties:
+                  suppCode:
+                    type: array
+                    items:
+                      type: string
+                  taskKeyCondition:
+                    type: array
+                    items:
+                      type: string
+                  taskDeveloperMessage:
+                    type: array
+                    items:
+                      type: string
+
+servers:
+  - url: http://localhost:3000
+    description: MO API Development Server
+  - url: http://10.138.33.78:9123
+    description: Backend API SDF Server
+  - url: http://10.138.46.101:20080
+    description: Backend API PGZ Server
