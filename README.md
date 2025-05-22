@@ -7,7 +7,7 @@ I'm a full stack web developer who enjoys building scalable web apps from backen
 ## 🛠 Tech Stack
 
 ### 🚀 Frontend
-- angular
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs)
 
