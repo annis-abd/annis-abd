@@ -1,0 +1,57 @@
+title Sync Location SFF
+
+control Cronjob #DB4437
+participant MO #4285F4
+database OracleDB #F4B400
+database MongoDB #0F9D58
+
+note over Cronjob: Runs daily at 2:00 AM
+
+Cronjob-#DB4437>MO: Trigger Process
+activate MO #4285F4
+
+MO-#4285F4>OracleDB: queryLocationSFF()
+activate OracleDB #F4B400
+OracleDB--#F4B400>MO: locations[]
+deactivate OracleDB
+
+alt locations found
+    loop for each location
+        MO-#4285F4>MongoDB: findOne({rowId})
+        activate MongoDB #0F9D58
+        MongoDB--#0F9D58>MO: found?
+        deactivate MongoDB
+       
+        alt new location
+            MO-#4285F4>MO: add to newLocation[]
+        else existing location
+            MO-#4285F4>MO:add to oldLocation[]
+        end
+    end
+   
+    alt new locations exist
+        MO-#4285F4>MongoDB:insertMany(newLocations)
+        activate MongoDB #0F9D58
+        MongoDB--#0F9D58>MO: insert result
+        deactivate MongoDB
+    end
+   
+    alt old locations exist
+        MO-#4285F4>MongoDB: bulkWrite(updates)
+        activate MongoDB #0F9D58
+        MongoDB--#0F9D58>MO: update result
+        deactivate MongoDB
+    end
+   
+    MO-#4285F4>MongoDB: createJob(success)
+    activate MongoDB #0F9D58
+    MongoDB--#0F9D58>MO: job record
+    deactivate MongoDB
+else error occurs
+    MO-#4285F4>MongoDB: createJob(error)
+    activate MongoDB #0F9D58
+    MongoDB--#0F9D58>MO: job record
+    deactivate MongoDB
+end
+
+deactivate MO

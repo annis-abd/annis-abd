@@ -1,0 +1,155 @@
+# change status 
+## mo
+ {
+  formType: 'range',
+  username: 'ADMIN',
+  system: 'ppsSim',
+  simFrom: '0000000000000',
+  simTo: '0000000000001',
+  userId: 'ADMIN',
+  actionType: 'Change Status',
+  updates: { status: 'S' },
+  total: 2
+}
+## pgz req
+{
+  requestHeader: {
+    resourceGroupId: 'changeStatusPPSSim_202505081709852620000000000000',
+    userSys: 'PHXNewInv',
+    reTransmit: '0'
+  },
+  resourceItemList: [
+    {
+      resourceName: 'changeStatusPPSSim',
+      operationType: 'ppsSim',
+      userId: 'ADMIN',
+      simSerialNo: '0000000000000',
+      locationCode: undefined,
+      newStatus: 'S',
+      oldStatus: 'B'
+    }
+  ]
+}
+
+# change profile 
+## mo
+{
+  formType: 'range',
+  username: 'ADMIN',
+  system: 'ppsSim',
+  simFrom: '0000000000000',
+  simTo: '0000000000001',
+  userId: 'ADMIN',
+  actionType: 'Change Profile',
+  updates: { source: 'S1' },
+  total: 2
+}
+## pgz req
+{
+  requestHeader: {
+    resourceGroupId: 'changeProfilePPSSim_202505081654349320000000000000',
+    userSys: 'PHXNewInv',
+    reTransmit: '0'
+  },
+  resourceItemList: [
+    {
+      resourceName: 'changeProfilePPSSim',
+      operationType: 'ppsSim',
+      userId: 'ADMIN',
+      simSerialNo: '0000000000000',
+      sourceCode: 'S1'
+    }
+  ]
+}
+## pgz res
+{
+  "responseHeader": {
+    "reTransmit": "0",
+    "userSys": "PHXNewInv",
+    "resourceGroupId": "changeProfilePPSSim_202505081654349320000000000000",
+    "resourceOrderId": "DBSIPGSA001G-PGZINV-202505081653010409",
+    "resultCode": "20000",
+    "resultDesc": "Success",
+    "developerMessage": ""
+  },
+  "resourceItemList": [
+    {
+      "resourceName": "changeProfilePPSSim",
+      "resourceItemStatus": "Success",
+      "resourceItemErrMessage": "Success",
+      "errorFlag": "11",
+      "specialErrHandling": {
+        "suppCode": [],
+        "taskKeyCondition": [],
+        "taskDeveloperMessage": []
+      }
+    }
+  ]
+}
+
+# transfer location
+## mo
+ {
+  formType: 'range',
+  username: 'ADMIN',
+  system: 'ppsSim',
+  simFrom: '0000000000000',
+  simTo: '0000000000001',
+  userId: 'ADMIN',
+  actionType: '',
+  updates: { location: '1002' },
+  total: 2
+}
+## oracle req
+UPDATE PP_SIM_STOCK_SERVICE SET LOCATION_CODE = '1002' WHERE SIM_SERIAL_NO = '0000000000001'
+## oracle res
+1
+
+----------------------------
+# change sim
+## mo
+ {
+  formType: 'range',
+  username: 'ADMIN',
+  system: 'ppsSimService',
+  simFrom: '0000000000000',
+  simTo: '0000000000001',
+  userId: 'ADMIN',
+  actionType: 'Change Status',
+  updates: { status: 'S' },
+  total: 1
+}
+## pgz
+{
+  requestHeader: {
+    resourceGroupId: 'changeStatusPPSSim_202505081714043960000000000001',
+    userSys: 'PHXNewInv',
+    reTransmit: '0'
+  },
+  resourceItemList: [
+    {
+      resourceName: 'changeStatusPPSSim',
+      operationType: 'ppsSimService',
+      userId: 'ADMIN',
+      simSerialNo: '0000000000001',
+      locationCode: undefined,
+      newStatus: 'S',
+      usedStatus: 'Y'
+    }
+  ]
+}
+# transfer location
+## mo 
+{
+  formType: 'range',
+  username: 'ADMIN',
+  system: 'ppsSimService',
+  simFrom: '0000000000000',
+  simTo: '0000000000001',
+  userId: 'ADMIN',
+  actionType: '',
+  updates: { location: '1007' },
+  total: 1
+}
+## pgz
+same ppssim
