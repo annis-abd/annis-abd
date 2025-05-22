@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Annis!
 
-I'm a full stack web developer who enjoys building scalable web apps from backend to frontend, with a focus on clean code and great performance.
+I'm a **Programmer Analyst** working in the **myOffice Team** at AIS.
 
 ---
 
